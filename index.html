@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Atomize Shop</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="icon" type="image/jpeg" href="imagenes/logo.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="imagenes/logo.jpeg" alt="Atomize Shop Logo">
+    </div>
+
+    <div class="hamburguesa" id="hamburguesa">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#perfumes">Perfumes</a></li>
+            <li><a href="#nosotros">Quiénes Somos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="inicio" class="hero">
+    <h1>Elegancia. Intensidad. Exclusividad.</h1>
+    <p>Perfumes orginales de alta calidad</p>
+    <a href="#perfumes" class="btn">Descubrir Colección</a>
+</section>
+
+<section id="perfumes" class="section">
+    <h2>Nuestra Colección</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="imagenes/perfume1.jpeg" alt="Hawas Black">
+            <h3>Hawas Black</h3>
+            <p>Elegancia oscura y sofisticada.</p>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/perfume2.jpeg" alt="Hawas Fire">
+            <h3>Hawas Fire</h3>
+            <p>Una fragancia intensa, cálida y poderosa.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="nosotros" class="section dark">
+    <h2>Quiénes Somos</h2>
+    <p>
+        Atomize es un emprendimiento dedicado a la venta de perfumes originales en Posadas.
+        Cuidamos cada detalle para que tengas una buena experiencia desde el primer mensaje hasta la entrega.
+    </p>
+</section>
+
+<section id="contacto" class="section">
+    <h2>Contacto</h2>
+
+    <div class="redes">
+        <a href="https://www.instagram.com/atomize_shop?igsh=cjBrMHEzcHZtOWpv" target="_blank">
+            <img src="imagenes/instagram.svg" alt="Instagram Atomize Shop" class="icono-red">
+        </a>
+
+        <a href="https://wa.me/3764587365" target="_blank">
+            <img src="imagenes/whatsapp.svg" alt="WhatsApp Atomize Shop" class="icono-red">
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Atomize Shop - Todos los derechos reservados</p>
+</footer>
+
+<script>
+const hamburguesa = document.getElementById("hamburguesa");
+const menu = document.getElementById("menu");
+
+hamburguesa.addEventListener("click", () => {
+    menu.classList.toggle("activo");
+});
+</script>
+
+</body>
+</html>
