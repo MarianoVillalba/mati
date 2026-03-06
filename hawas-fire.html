@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Hawas Fire - Atomize Shop</title>
+<link rel="stylesheet" href="estilos/estilos.css">
+<link rel="icon" type="image/jpeg" href="imagenes/logo.jpeg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="imagenes/logo.jpeg" alt="Atomize Shop">
+    </div>
+</header>
+
+<section class="detalle-perfume">
+
+<div class="detalle-container">
+
+<!-- GALERIA -->
+<div class="galeria">
+
+<img src="imagenes/perfume2.jpeg" class="foto-principal" id="fotoPrincipal">
+
+<div class="miniaturas">
+<img src="imagenes/perfumemano2.jpeg" onclick="cambiarFoto(this)">
+<img src="imagenes/perfumecaja2.jpeg" onclick="cambiarFoto(this)">
+<img src="imagenes/cara2.jpeg" onclick="cambiarFoto(this)">
+</div>
+
+</div>
+
+<!-- INFO -->
+<div class="info-perfume">
+
+<h1>Hawas Fire</h1>
+
+<p class="precio">$50.000</p>
+
+<p class="descripcion">
+Hawas Fire es una fragancia intensa, cálida y seductora que transmite fuerza y elegancia desde el primer instante. Pensada para quienes buscan un aroma con carácter, combina especias vibrantes con notas profundas y amaderadas, creando una presencia sofisticada y memorable. Es ideal para la noche o para ocasiones especiales, donde un perfume fuerte y distinguido marca la diferencia.
+</p>
+
+<h3>Notas</h3>
+
+<ul>
+<li>🔥 Notas de salida: Canela especiada que aporta una apertura cálida y envolvente.</li>
+<li>🌿 Notas medias: Cardamomo aromático que añade intensidad y un toque exótico.</li>
+<li>🌳 Notas de fondo: Maderas y ámbar que dejan un rastro profundo, elegante y duradero.</li>
+</ul>
+
+<a href="https://wa.me/5493764587365?text=Hola%20quiero%20comprar%20Hawas%20Fire" class="btn-comprar" target="_blank">
+Comprar por WhatsApp
+</a>
+
+<a href="index.html" class="btn-volver">
+Volver a la tienda
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- VISOR DE IMAGEN GRANDE -->
+<div id="visor" onclick="cerrarVisor()">
+<img id="imagenGrande">
+</div>
+
+<script>
+
+function cambiarFoto(img){
+document.getElementById("fotoPrincipal").src = img.src;
+}
+
+const fotoPrincipal = document.getElementById("fotoPrincipal");
+const visor = document.getElementById("visor");
+const imagenGrande = document.getElementById("imagenGrande");
+
+fotoPrincipal.onclick = function(){
+visor.style.display = "flex";
+imagenGrande.src = this.src;
+}
+
+function cerrarVisor(){
+visor.style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
