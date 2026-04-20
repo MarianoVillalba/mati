@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Velvet Petals Shimmer - Atomize Shop</title>
+<link rel="stylesheet" href="../estilos/estilos.css">
+<link rel="icon" type="image/jpeg" href="../imagenes/logo.jpeg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../imagenes/logo.jpeg" alt="Atomize Shop">
+    </div>
+</header>
+
+<section class="detalle-perfume">
+
+<div class="detalle-container">
+
+<!-- GALERIA -->
+<div class="galeria">
+
+<img src="../imagenes/body3.jpg" class="foto-principal" id="fotoPrincipal">
+
+<div class="miniaturas">
+<img src="../imagenes/bodyparado3.jpg" onclick="cambiarFoto(this)">
+<img src="../imagenes/body3.jpg" onclick="cambiarFoto(this)">
+</div>
+
+</div>
+
+<!-- INFO -->
+<div class="info-perfume">
+
+<h1>Bere Vanilla</h1>
+
+<p class="precio">$20.000</p>
+
+<p class="descripcion">
+Bare Vanilla es una fragancia cálida, dulce y reconfortante que envuelve la piel con un aroma suave y adictivo.
+Su esencia cremosa resalta la sensualidad y la elegancia, siendo perfecta para el uso diario
+o para quienes buscan un perfume delicado pero irresistible.
+</p>
+
+<h3>Notas</h3>
+
+<ul>
+<li>🍦 Notas de salida: Vainilla suave que brinda una apertura dulce y envolvente.</li>
+<li>🌸 Notas medias: Flores delicadas que aportan un toque femenino y elegante.</li>
+<li>🌿 Notas de fondo: Almizcle y notas cremosas que dejan una base cálida, suave y duradera.</li>
+</ul>
+
+<a href="https://wa.me/5493764587365?text=Hola%20quiero%20comprar%20Velvet%20Petals%20Shimmer" class="btn-comprar" target="_blank">
+Comprar por WhatsApp
+</a>
+
+<a href="../index.html" class="btn-volver">
+Volver a la tienda
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- VISOR DE IMAGEN GRANDE -->
+<div id="visor" onclick="cerrarVisor()">
+<img id="imagenGrande">
+</div>
+
+<script>
+
+function cambiarFoto(img){
+document.getElementById("fotoPrincipal").src = img.src;
+}
+
+const fotoPrincipal = document.getElementById("fotoPrincipal");
+const visor = document.getElementById("visor");
+const imagenGrande = document.getElementById("imagenGrande");
+
+fotoPrincipal.onclick = function(){
+visor.style.display = "flex";
+imagenGrande.src = this.src;
+}
+
+function cerrarVisor(){
+visor.style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
