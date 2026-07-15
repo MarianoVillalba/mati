@@ -138,13 +138,13 @@ nav a:hover {
 }
 
 .icono-red {
-    width: 60px;     /* más grande */
+    width: 60px;
     height: 60px;
     transition: 0.3s ease;
 }
 
 .icono-red:hover {
-    transform: scale(1.05);   /* efecto muy sutil */
+    transform: scale(1.05);
     opacity: 0.85;
 }
 
@@ -200,7 +200,189 @@ footer {
     text-align: center;
 }
 
-/* RESPONSIVE */
+/* ============================================================ */
+/* ESTILOS DEL CARRUSEL PARA PERFUMES.HTML                      */
+/* ============================================================ */
+
+.carrusel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.carrusel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carrusel-slide .detalle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+}
+
+.btn-carrusel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    font-size: 40px;
+    padding: 20px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.btn-carrusel:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.btn-carrusel.izquierda {
+    left: 10px;
+}
+
+.btn-carrusel.derecha {
+    right: 10px;
+}
+
+/* Indicadores / puntos */
+.indicadores {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.indicador {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.indicador.activo {
+    background: #333;
+}
+
+/* ============================================================ */
+/* DETALLE PERFUME (para los slides del carrusel)              */
+/* ============================================================ */
+
+.detalle-perfume {
+    padding: 120px 10%;
+}
+
+.detalle-container {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.galeria {
+    flex: 1;
+}
+
+.foto-principal {
+    width: 100%;
+    max-width: 400px;
+}
+
+.miniaturas {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.miniaturas img {
+    width: 80px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+.info-perfume {
+    flex: 1;
+}
+
+.info-perfume h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    margin-bottom: 20px;
+}
+
+.btn-comprar {
+    display: inline-block;
+    padding: 12px 25px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn-comprar:hover {
+    opacity: 0.8;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 12px 25px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+}
+
+#visor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#visor img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* ============================================================ */
+/* RESPONSIVE                                                   */
+/* ============================================================ */
+
 @media(max-width: 768px){
 
     nav {
@@ -226,166 +408,119 @@ footer {
     .hamburguesa {
         display: flex;
     }
-}
 
-.detalle-perfume{
-    padding:120px 10%;
-}
+    /* Botones del carrusel más pequeños en móvil */
+    .btn-carrusel {
+        font-size: 30px;
+        padding: 12px 10px;
+        width: 45px;
+        height: 45px;
+    }
 
-.detalle-container{
-    display:flex;
-    gap:60px;
-    flex-wrap:wrap;
+    .carrusel-slide .detalle-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 }
-
-.galeria{
-    flex:1;
-}
-
-.foto-principal{
-    width:100%;
-    max-width:400px;
-}
-
-.miniaturas{
-    margin-top:15px;
-    display:flex;
-    gap:10px;
-}
-
-.miniaturas img{
-    width:80px;
-    cursor:pointer;
-    border:1px solid #ddd;
-}
-
-.info-perfume{
-    flex:1;
-}
-
-.info-perfume h1{
-    font-size:32px;
-    margin-bottom:10px;
-}
-
-.precio{
-    font-size:24px;
-    font-weight:bold;
-    margin-bottom:20px;
-}
-
-.descripcion{
-    margin-bottom:20px;
-}
-
-.btn-comprar{
-    display:inline-block;
-    padding:12px 25px;
-    background:black;
-    color:white;
-    text-decoration:none;
-    margin-top:15px;
-    transition:0.3s;
-}
-
-.btn-comprar:hover{
-    opacity:0.8;
-}
-
-.btn-volver{
-    display:inline-block;
-    margin-left:15px;
-    padding:12px 25px;
-    border:1px solid black;
-    text-decoration:none;
-    color:black;
-}
-#visor{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-display:none;
-justify-content:center;
-align-items:center;
-z-index:999;
-}
-
-#visor img{
-max-width:90%;
-max-height:90%;
-}
-
-/* ========================= */
-/* RESPONSIVE PERFUME PAGE */
-/* ========================= */
 
 @media(max-width: 900px){
 
-.detalle-container{
-flex-direction:column;
-align-items:center;
-text-align:center;
-gap:40px;
+    .detalle-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .galeria {
+        width: 100%;
+    }
+
+    .foto-principal {
+        max-width: 100%;
+    }
+
+    .miniaturas {
+        justify-content: center;
+    }
+
+    .info-perfume {
+        width: 100%;
+    }
+
+    .info-perfume h1 {
+        font-size: 28px;
+    }
+
+    .precio {
+        font-size: 22px;
+    }
+
+    .descripcion {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .btn-comprar,
+    .btn-volver {
+        display: block;
+        margin: 15px auto;
+        width: 220px;
+    }
+
 }
 
-.galeria{
-width:100%;
-}
-
-.foto-principal{
-max-width:100%;
-}
-
-.miniaturas{
-justify-content:center;
-}
-
-.info-perfume{
-width:100%;
-}
-
-.info-perfume h1{
-font-size:28px;
-}
-
-.precio{
-font-size:22px;
-}
-
-.descripcion{
-font-size:15px;
-line-height:1.6;
-}
-
-.btn-comprar,
-.btn-volver{
-display:block;
-margin:15px auto;
-width:220px;
-}
-
-}
-
-/* MOBILE */
 @media(max-width:500px){
 
-.detalle-perfume{
-padding:100px 20px;
+    .detalle-perfume {
+        padding: 100px 20px;
+    }
+
+    .info-perfume h1 {
+        font-size: 24px;
+    }
+
+    .miniaturas img {
+        width: 65px;
+    }
+
+    .precio {
+        font-size: 20px;
+    }
+
+    .btn-carrusel {
+        font-size: 20px;
+        padding: 8px;
+        width: 35px;
+        height: 35px;
+    }
+}
+/* Tarjeta destacada para "Ver todos los perfumes" */
+.card-destacada {
+    width: 350px; /* Más ancha que las demás */
+    padding: 30px;
 }
 
-.info-perfume h1{
-font-size:24px;
+.card-destacada img {
+    height: 350px; /* Imagen más grande */
 }
 
-.miniaturas img{
-width:65px;
+.card-destacada p {
+    margin: 15px 0;
+    line-height: 1.6;
 }
 
-.precio{
-font-size:20px;
+.card-destacada .btn-detalle {
+    font-size: 16px;
+    padding: 12px 30px;
+    background: black;
+    color: white;
+    border: none;
+    transition: 0.3s;
 }
 
+.card-destacada .btn-detalle:hover {
+    background: #333;
+    transform: scale(1.05);
 }

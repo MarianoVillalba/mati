@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Atomize Shop - Perfumes</title>
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <link rel="icon" type="image/jpeg" href="../imagenes/logo.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../imagenes/logo.jpeg" alt="Atomize Shop">
+    </div>
+</header>
+
+<!-- ============================================================ -->
+<!-- CARRUSEL DE PERFUMES                                         -->
+<!-- ============================================================ -->
+<section class="detalle-perfume">
+    <div class="carrusel-container">
+
+        <!-- Flecha Izquierda -->
+        <button class="btn-carrusel izquierda" onclick="cambiarSlide(-1)">&#10094;</button>
+
+        <!-- Flecha Derecha -->
+        <button class="btn-carrusel derecha" onclick="cambiarSlide(1)">&#10095;</button>
+
+        <!-- Wrapper de los slides -->
+        <div class="carrusel-wrapper" id="carruselWrapper">
+
+            <!-- SLIDE 1: HAWAS BLACK -->
+            <div class="carrusel-slide" id="hawas-black">
+                <div class="detalle-container">
+                    <div class="galeria">
+                        <img src="../imagenes/perfume1.jpeg" class="foto-principal" id="fotoPrincipal1">
+                        <div class="miniaturas">
+                            <img src="../imagenes/perfumemano1.jpeg" onclick="cambiarFoto('fotoPrincipal1', this)">
+                            <img src="../imagenes/perfumecaja1.jpeg" onclick="cambiarFoto('fotoPrincipal1', this)">
+                            <img src="../imagenes/cara1.jpeg" onclick="cambiarFoto('fotoPrincipal1', this)">
+                        </div>
+                    </div>
+                    <div class="info-perfume">
+                        <h1>Hawas Black</h1>
+                        <p class="precio">$55.000</p>
+                        <p class="descripcion">
+                            Hawas Black es una fragancia intensa, elegante y misteriosa.
+                            Perfecta para la noche y ocasiones especiales. Su aroma mezcla
+                            notas dulces, amaderadas y especiadas que generan una presencia
+                            fuerte y sofisticada.
+                        </p>
+                        <h3>Notas</h3>
+                        <ul>
+                            <li>🔥 Notas de salida: Bergamota fresca que aporta una apertura vibrante y refinada.</li>
+                            <li>🌿 Notas medias: Lavanda aromática que añade equilibrio, elegancia y un toque clásico.</li>
+                            <li>🌳 Notas de fondo: Ámbar y maderas cálidas que crean una base intensa, masculina y duradera.</li>
+                        </ul>
+                        <a href="https://wa.me/5493764587365?text=Hola,%20estoy%20interesado%20en%20el%20perfume%20hawas-black%20de%20Atomize%20Shop.%20¿Está%20disponible?" class="btn-comprar" target="_blank">Comprar por WhatsApp</a>
+                        <a href="../index.html" class="btn-volver">Volver a la tienda</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: HAWAS FIRE -->
+            <div class="carrusel-slide" id="hawas-fire">
+                <div class="detalle-container">
+                    <div class="galeria">
+                        <img src="../imagenes/perfume2.jpeg" class="foto-principal" id="fotoPrincipal2">
+                        <div class="miniaturas">
+                            <img src="../imagenes/perfumemano2.jpeg" onclick="cambiarFoto('fotoPrincipal2', this)">
+                            <img src="../imagenes/perfumecaja2.jpeg" onclick="cambiarFoto('fotoPrincipal2', this)">
+                            <img src="../imagenes/cara2.jpeg" onclick="cambiarFoto('fotoPrincipal2', this)">
+                        </div>
+                    </div>
+                    <div class="info-perfume">
+                        <h1>Hawas Fire</h1>
+                        <p class="precio">$50.000</p>
+                        <p class="descripcion">
+                            Hawas Fire es una fragancia intensa, cálida y seductora que transmite fuerza y elegancia desde el primer instante. Pensada para quienes buscan un aroma con carácter, combina especias vibrantes con notas profundas y amaderadas, creando una presencia sofisticada y memorable. Es ideal para la noche o para ocasiones especiales, donde un perfume fuerte y distinguido marca la diferencia.
+                        </p>
+                        <h3>Notas</h3>
+                        <ul>
+                            <li>🔥 Notas de salida: Canela especiada que aporta una apertura cálida y envolvente.</li>
+                            <li>🌿 Notas medias: Cardamomo aromático que añade intensidad y un toque exótico.</li>
+                            <li>🌳 Notas de fondo: Maderas y ámbar que dejan un rastro profundo, elegante y duradero.</li>
+                        </ul>
+                        <a href="https://wa.me/5493764587365?text=Hola%20quiero%20comprar%20Hawas%20Fire" class="btn-comprar" target="_blank">Comprar por WhatsApp</a>
+                        <a href="../index.html" class="btn-volver">Volver a la tienda</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: ASLOOB -->
+            <div class="carrusel-slide" id="asloob">
+                <div class="detalle-container">
+                    <div class="galeria">
+                        <img src="../imagenes/perfumemujer.jpeg" class="foto-principal" id="fotoPrincipal3">
+                        <div class="miniaturas">
+                            <img src="../imagenes/perfumemano3.jpeg" onclick="cambiarFoto('fotoPrincipal3', this)">
+                            <img src="../imagenes/perfumecaja3.jpeg" onclick="cambiarFoto('fotoPrincipal3', this)">
+                            <img src="../imagenes/cara3.jpeg" onclick="cambiarFoto('fotoPrincipal3', this)">
+                        </div>
+                    </div>
+                    <div class="info-perfume">
+                        <h1>Asloob</h1>
+                        <p class="precio">$45.000</p>
+                        <p class="descripcion">
+                            Asloob es una fragancia femenina elegante y envolvente que combina
+                            notas dulces y florales para crear un aroma delicado y sofisticado.
+                            Es perfecta para mujeres que buscan destacar con un perfume moderno,
+                            romántico y lleno de personalidad.
+                        </p>
+                        <h3>Notas</h3>
+                        <ul>
+                            <li>🌸 Notas de salida: Frutas dulces y toques cítricos que brindan una apertura fresca y femenina.</li>
+                            <li>🌺 Notas medias: Flores blancas y jazmín que aportan elegancia, suavidad y sensualidad.</li>
+                            <li>🌿 Notas de fondo: Vainilla y almizcle que crean una base cálida, duradera y seductora.</li>
+                        </ul>
+                        <a href="https://wa.me/5493764587365" class="btn-comprar" target="_blank">Comprar por WhatsApp</a>
+                        <a href="../index.html" class="btn-volver">Volver a la tienda</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 4: ASAD BOURBON -->
+            <div class="carrusel-slide" id="asad-bourbon">
+                <div class="detalle-container">
+                    <div class="galeria">
+                        <img src="../imagenes/perfume4.jpg" class="foto-principal" id="fotoPrincipal4">
+                        <div class="miniaturas">
+                            <img src="../imagenes/perfumemano4.jpg" onclick="cambiarFoto('fotoPrincipal4', this)">
+                            <img src="../imagenes/perfumecaja4.jpg" onclick="cambiarFoto('fotoPrincipal4', this)">
+                            <img src="../imagenes/perfumecarac4.jpg" onclick="cambiarFoto('fotoPrincipal4', this)">
+                        </div>
+                    </div>
+                    <div class="info-perfume">
+                        <h1>Asad Bourbon</h1>
+                        <p class="precio">$55.000</p>
+                        <p class="descripcion">
+                            Asad es una fragancia árabe intensa y sofisticada que combina notas especiadas,
+                            dulces y amaderadas para crear un aroma poderoso y envolvente.
+                            Es ideal para hombres que buscan destacar con un perfume elegante,
+                            moderno y con mucha personalidad, perfecto para dejar una impresión fuerte y duradera.
+                        </p>
+                        <h3>Notas</h3>
+                        <ul>
+                            <li>🔥 Notas de salida: Pimienta negra, piña y tabaco que brindan una apertura especiada, dulce y ligeramente ahumada.</li>
+                            <li>☕ Notas medias: Café, pachulí e iris que aportan profundidad, calidez y un toque elegante y masculino.</li>
+                            <li>🌙 Notas de fondo: Vainilla, ámbar y maderas secas que crean una base cálida, intensa y muy duradera.</li>
+                        </ul>
+                        <a href="https://wa.me/5493764587365?text=Hola,%20estoy%20interesado%20en%20el%20perfume%20Asad%20de%20Atomize%20Shop.%20¿Está%20disponible?" class="btn-comprar" target="_blank">Comprar por WhatsApp</a>
+                        <a href="../index.html" class="btn-volver">Volver a la tienda</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 5: KHAMRAH -->
+            <div class="carrusel-slide" id="khamrah">
+                <div class="detalle-container">
+                    <div class="galeria">
+                        <img src="../imagenes/perfume5.jpg" class="foto-principal" id="fotoPrincipal5">
+                        <div class="miniaturas">
+                            <img src="../imagenes/perfumecaja5.jpg" onclick="cambiarFoto('fotoPrincipal5', this)">
+                            <img src="../imagenes/perfumecarac5.jpg" onclick="cambiarFoto('fotoPrincipal5', this)">
+                        </div>
+                    </div>
+                    <div class="info-perfume">
+                        <h1>Khamrah</h1>
+                        <p class="precio">$20.000</p>
+                        <p class="descripcion">
+                            Khamrah es una fragancia árabe cálida y adictiva que combina notas dulces,
+                            especiadas y orientales para crear un aroma envolvente y lujoso.
+                            Es perfecta para quienes buscan un perfume intenso, elegante y con gran presencia,
+                            ideal para noches especiales y para dejar una estela inolvidable.
+                        </p>
+                        <h3>Notas</h3>
+                        <ul>
+                            <li>🍬 Notas de salida: Canela, nuez moscada y bergamota que brindan una apertura especiada, dulce y vibrante.</li>
+                            <li>🍯 Notas medias: Dátiles, praliné y nardos que aportan un corazón gourmand, cálido y exótico.</li>
+                            <li>🌰 Notas de fondo: Vainilla, haba tonka, benjuí y maderas que crean una base profunda, dulce y muy duradera.</li>
+                        </ul>
+                        <a href="https://wa.me/5493764587365?text=Hola%20quiero%20comprar%20el%20perfume%20Khamrah" class="btn-comprar" target="_blank">Comprar por WhatsApp</a>
+                        <a href="../index.html" class="btn-volver">Volver a la tienda</a>
+                    </div>
+                </div>
+            </div>
+            <!-- SLIDE 6: HER CONFESSION -->
+            <div class="carrusel-slide" id="her-confession">
+                <div class="detalle-container">
+                    <div class="galeria">
+                        <img src="../imagenes/perfume6.jpeg" class="foto-principal" id="fotoPrincipal6">
+                        <div class="miniaturas">
+                            <img src="../imagenes/perfumecaja6.jpeg" onclick="cambiarFoto('fotoPrincipal6', this)">
+                            <img src="../imagenes/cara6.jpeg" onclick="cambiarFoto('fotoPrincipal6', this)">
+                        </div>
+                    </div>
+                    <div class="info-perfume">
+                        <h1>Her Confession</h1>
+                        <p class="precio">$55.000</p>
+                        <p class="descripcion">
+                            Her Confession es una fragancia femenina cautivadora y llena de misterio que combina notas florales y frutales para crear un aroma sofisticado y seductor. Perfecta para la mujer moderna que busca un perfume elegante, con personalidad y que deje una huella inolvidable en cada ocasión especial.
+                        </p>
+                        <h3>Notas</h3>
+                        <ul>
+                            <li>🌸 Notas de salida: Pera, bergamota y frambuesa que brindan una apertura fresca, dulce y vibrante.</li>
+                            <li>🌺 Notas medias: Jazmín, peonía y rosa que aportan un corazón floral, elegante y romántico.</li>
+                            <li>🌿 Notas de fondo: Vainilla, almizcle y sándalo que crean una base cálida, envolvente y duradera.</li>
+                        </ul>
+                        <a href="https://wa.me/5493764587365?text=Hola%20quiero%20comprar%20el%20perfume%20Her%20Confession" class="btn-comprar" target="_blank">Comprar por WhatsApp</a>
+                        <a href="../index.html" class="btn-volver">Volver a la tienda</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 7: ASAD LATTAFA -->
+            <div class="carrusel-slide" id="asad-lattafa">
+                <div class="detalle-container">
+                    <div class="galeria">
+                        <img src="../imagenes/perfume7.jpeg" class="foto-principal" id="fotoPrincipal7">
+                        <div class="miniaturas">
+                            <img src="../imagenes/fotomano7.jpeg" onclick="cambiarFoto('fotoPrincipal7', this)">
+                            <img src="../imagenes/perfumecaja7.jpeg" onclick="cambiarFoto('fotoPrincipal7', this)">
+                            <img src="../imagenes/cara7.jpeg" onclick="cambiarFoto('fotoPrincipal7', this)">
+                        </div>
+                    </div>
+                    <div class="info-perfume">
+                        <h1>Asad Lattafa</h1>
+                        <p class="precio">$45.000</p>
+                        <p class="descripcion">
+                            Asad Lattafa es una fragancia árabe intensa y sofisticada que combina notas especiadas, dulces y amaderadas para crear un aroma poderoso y envolvente. Inspirada en la elegancia oriental, es perfecta para el hombre moderno que busca un perfume con carácter, presencia y una estela duradera que no pasa desapercibida.
+                        </p>
+                        <h3>Notas</h3>
+                        <ul>
+                            <li>🔥 Notas de salida: Pimienta negra, piña y tabaco que brindan una apertura especiada, dulce y ligeramente ahumada.</li>
+                            <li>☕ Notas medias: Café, pachulí e iris que aportan profundidad, calidez y un toque elegante y masculino.</li>
+                            <li>🌙 Notas de fondo: Vainilla, ámbar y maderas secas que crean una base cálida, intensa y muy duradera.</li>
+                        </ul>
+                        <a href="https://wa.me/5493764587365?text=Hola%20quiero%20comprar%20el%20perfume%20Asad%20Lattafa" class="btn-comprar" target="_blank">Comprar por WhatsApp</a>
+                        <a href="../index.html" class="btn-volver">Volver a la tienda</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 8: YARA DE MUJER -->
+        <div class="carrusel-slide" id="yara-mujer">
+            <div class="detalle-container">
+                <div class="galeria">
+                    <img src="../imagenes/perfume8.jpeg" class="foto-principal" id="fotoPrincipal8">
+                    <div class="miniaturas">
+                        <img src="../imagenes/perfumemano8.jpeg" onclick="cambiarFoto('fotoPrincipal8', this)">
+                        <img src="../imagenes/cara8.jpeg" onclick="cambiarFoto('fotoPrincipal8', this)">
+                    </div>
+                </div>
+                <div class="info-perfume">
+                    <h1>Yara</h1>
+                    <p class="precio">$50.000</p>
+                    <p class="descripcion">
+                        Yara es una fragancia femenina delicada y cautivadora que combina notas florales, frutales y golosas para crear un aroma suave, romántico y lleno de personalidad. Perfecta para la mujer que busca un perfume versátil, elegante y con un toque dulce que la haga sentir especial en cualquier ocasión.
+                    </p>
+                    <h3>Notas</h3>
+                    <ul>
+                        <li>🍑 Notas de salida: Frutos rojos, pera y bergamota que brindan una apertura fresca, dulce y vibrante.</li>
+                        <li>🌸 Notas medias: Jazmín, rosa y heliotropo que aportan un corazón floral, elegante y romántico.</li>
+                        <li>🍦 Notas de fondo: Vainilla, almizcle, sándalo y caramelo que crean una base cálida, envolvente y duradera.</li>
+                    </ul>
+                    <a href="https://wa.me/5493764587365?text=Hola%20quiero%20comprar%20el%20perfume%20Yara%20de%20mujer" class="btn-comprar" target="_blank">Comprar por WhatsApp</a>
+                    <a href="../index.html" class="btn-volver">Volver a la tienda</a>
+                </div>
+            </div>
+        </div>
+        <!-- SLIDE 9: ODYSSEY MANDARIN SKY ELIXIR -->
+        <div class="carrusel-slide" id="odyssey-mandarin">
+            <div class="detalle-container">
+                <div class="galeria">
+                    <img src="../imagenes/perfume9.jpeg" class="foto-principal" id="fotoPrincipal9">
+                    <div class="miniaturas">
+                        <img src="../imagenes/perfumecaja9.jpeg" onclick="cambiarFoto('fotoPrincipal9', this)">
+                        <img src="../imagenes/cara9.jpeg" onclick="cambiarFoto('fotoPrincipal9', this)">
+                    </div>
+                </div>
+                <div class="info-perfume">
+                    <h1>Odyssey Mandarin Sky Elixir</h1>
+                    <p class="precio">$50.000</p>
+                    <p class="descripcion">
+                        Odyssey Mandarin Sky Elixir es una fragancia fresca, vibrante y sofisticada que combina notas cítricas y amaderadas para crear un aroma energizante y elegante. Inspirada en el cielo mediterráneo, es perfecta para el hombre moderno que busca un perfume versátil, con personalidad y una estela refrescante que lo acompañe durante todo el día.
+                    </p>
+                    <h3>Notas</h3>
+                    <ul>
+                        <li>🍊 Notas de salida: Mandarina, bergamota y limón que brindan una apertura cítrica, fresca y vibrante.</li>
+                        <li>🌿 Notas medias: Lavanda, salvia y manzana verde que aportan un corazón aromático, limpio y equilibrado.</li>
+                        <li>🌳 Notas de fondo: Ámbar, cedro y almizcle que crean una base cálida, elegante y duradera.</li>
+                    </ul>
+                    <a href="https://wa.me/5493764587365?text=Hola%20quiero%20comprar%20el%20perfume%20Odyssey%20Mandarin%20Sky%20Elixir" class="btn-comprar" target="_blank">Comprar por WhatsApp</a>
+                    <a href="../index.html" class="btn-volver">Volver a la tienda</a>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Indicadores / Puntos -->
+        <div class="indicadores" id="indicadores"></div>
+
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- VISOR DE IMAGEN GRANDE                                       -->
+<!-- ============================================================ -->
+<div id="visor" onclick="cerrarVisor()">
+    <img id="imagenGrande">
+</div>
+
+<script>
+    // ============================================================
+    // CARRUSEL
+    // ============================================================
+    let slideActual = 0;
+    const totalSlides = 9;
+    const wrapper = document.getElementById('carruselWrapper');
+    const indicadores = document.getElementById('indicadores');
+
+    // Crear los indicadores (puntos)
+    for (let i = 0; i < totalSlides; i++) {
+        const punto = document.createElement('span');
+        punto.className = 'indicador';
+        if (i === 0) punto.classList.add('activo');
+        punto.onclick = function() { irAlSlide(i); };
+        indicadores.appendChild(punto);
+    }
+
+    // Verificar si hay un hash en la URL (para ir al perfume específico)
+    function verificarHash() {
+        const hash = window.location.hash;
+        if (hash) {
+            const perfumes = ['hawas-black', 'hawas-fire', 'asloob', 'asad-bourbon', 'khamrah', 'her-confession', 'asad-lattafa', 'yara-mujer', 'odyssey-mandarin'];
+            const index = perfumes.indexOf(hash.replace('#', ''));
+            if (index !== -1) {
+                slideActual = index;
+                actualizarCarrusel();
+            }
+        }
+    }
+
+    function actualizarCarrusel() {
+        wrapper.style.transform = `translateX(-${slideActual * 100}%)`;
+
+        const puntos = document.querySelectorAll('.indicador');
+        puntos.forEach((p, index) => {
+            p.classList.toggle('activo', index === slideActual);
+        });
+    }
+
+    function cambiarSlide(direccion) {
+        slideActual += direccion;
+        if (slideActual < 0) slideActual = totalSlides - 1;
+        if (slideActual >= totalSlides) slideActual = 0;
+        actualizarCarrusel();
+    }
+
+    function irAlSlide(index) {
+        slideActual = index;
+        actualizarCarrusel();
+    }
+
+    // Flechas con teclado
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') cambiarSlide(-1);
+        if (e.key === 'ArrowRight') cambiarSlide(1);
+    });
+
+    // ============================================================
+    // GALERÍA DE IMÁGENES
+    // ============================================================
+    function cambiarFoto(idFotoPrincipal, img) {
+        document.getElementById(idFotoPrincipal).src = img.src;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const fotosPrincipales = document.querySelectorAll('.foto-principal');
+        const visor = document.getElementById('visor');
+        const imagenGrande = document.getElementById('imagenGrande');
+
+        fotosPrincipales.forEach(function(foto) {
+            foto.onclick = function() {
+                visor.style.display = 'flex';
+                imagenGrande.src = this.src;
+            };
+        });
+
+        // Verificar hash al cargar
+        verificarHash();
+    });
+
+    function cerrarVisor() {
+        document.getElementById('visor').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
