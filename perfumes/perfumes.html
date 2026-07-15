@@ -11,7 +11,9 @@
 
 <header>
     <div class="logo">
-        <img src="../imagenes/logo.jpeg" alt="Atomize Shop">
+        <a href="../index.html">
+            <img src="../imagenes/logo.jpeg" alt="Atomize Shop">
+        </a>
     </div>
 </header>
 
@@ -296,6 +298,60 @@
                 </div>
             </div>
         </div>
+        <!-- SLIDE 10: 9AM DIVE -->
+            <div class="carrusel-slide" id="9am-dive">
+                <div class="detalle-container">
+                    <div class="galeria">
+                        <img src="../imagenes/perfume10.jpeg" class="foto-principal" id="fotoPrincipal10">
+                        <div class="miniaturas">
+                            <img src="../imagenes/perfumemano10.jpeg" onclick="cambiarFoto('fotoPrincipal10', this)">
+                            <img src="../imagenes/cara10.jpeg" onclick="cambiarFoto('fotoPrincipal10', this)">
+                        </div>
+                    </div>
+                    <div class="info-perfume">
+                        <h1>9am Dive</h1>
+                        <p class="precio">$50.000</p>
+                        <p class="descripcion">
+                            9am Dive es una fragancia fresca, acuática y revitalizante que captura la energía de un nuevo día. Inspirada en la brisa marina y el amanecer, combina notas cítricas y acuáticas con un fondo amaderado y almizclado. Perfecta para el hombre dinámico que busca un perfume versátil, limpio y con personalidad para usar a cualquier hora del día.
+                        </p>
+                        <h3>Notas</h3>
+                        <ul>
+                            <li>🌊 Notas de salida: Bergamota, limón y menta que brindan una apertura fresca, energética y vibrante.</li>
+                            <li>💧 Notas medias: Notas marinas, lavanda y geranio que aportan un corazón acuático, limpio y aromático.</li>
+                            <li>🌳 Notas de fondo: Ámbar, cedro y almizcle que crean una base cálida, elegante y duradera.</li>
+                        </ul>
+                        <a href="https://wa.me/5493764587365?text=Hola%20quiero%20comprar%20el%20perfume%209am%20Dive" class="btn-comprar" target="_blank">Comprar por WhatsApp</a>
+                        <a href="../index.html" class="btn-volver">Volver a la tienda</a>
+                    </div>
+                </div>
+            </div>   
+            <!-- SLIDE 11: HAWAS ATLANTIS -->
+            <div class="carrusel-slide" id="hawas-atlantis">
+                <div class="detalle-container">
+                    <div class="galeria">
+                        <img src="../imagenes/perfume11.jpeg" class="foto-principal" id="fotoPrincipal11">
+                        <div class="miniaturas">
+                            <img src="../imagenes/perfumecaja11.jpeg" onclick="cambiarFoto('fotoPrincipal11', this)">
+                            <img src="../imagenes/cara11.jpeg" onclick="cambiarFoto('fotoPrincipal11', this)">
+                        </div>
+                    </div>
+                    <div class="info-perfume">
+                        <h1>Hawas Atlantis</h1>
+                        <p class="precio">$45.000</p>
+                        <p class="descripcion">
+                            Hawas Atlantis es una fragancia fresca, acuática y enérgica que evoca la inmensidad del océano y la brisa marina. Inspirada en la mítica ciudad perdida, combina notas cítricas, acuáticas y amaderadas para crear un aroma limpio, revitalizante y lleno de vitalidad. Perfecta para el hombre moderno que busca un perfume versátil, fresco y con una estela duradera que lo acompañe en cada aventura.
+                        </p>
+                        <h3>Notas</h3>
+                        <ul>
+                            <li>🌊 Notas de salida: Bergamota, limón y notas marinas que brindan una apertura fresca, vibrante y acuática.</li>
+                            <li>💎 Notas medias: Lavanda, geranio y jazmín que aportan un corazón aromático, elegante y sofisticado.</li>
+                            <li>🌳 Notas de fondo: Ámbar, cedro y almizcle que crean una base cálida, profunda y duradera.</li>
+                        </ul>
+                        <a href="https://wa.me/5493764587365?text=Hola%20quiero%20comprar%20el%20perfume%20Hawas%20Atlantis" class="btn-comprar" target="_blank">Comprar por WhatsApp</a>
+                        <a href="../index.html" class="btn-volver">Volver a la tienda</a>
+                    </div>
+                </div>
+            </div>   
         </div>
 
         <!-- Indicadores / Puntos -->
@@ -316,7 +372,7 @@
     // CARRUSEL
     // ============================================================
     let slideActual = 0;
-    const totalSlides = 9;
+    const totalSlides = 11;
     const wrapper = document.getElementById('carruselWrapper');
     const indicadores = document.getElementById('indicadores');
 
@@ -333,7 +389,7 @@
     function verificarHash() {
         const hash = window.location.hash;
         if (hash) {
-            const perfumes = ['hawas-black', 'hawas-fire', 'asloob', 'asad-bourbon', 'khamrah', 'her-confession', 'asad-lattafa', 'yara-mujer', 'odyssey-mandarin'];
+            const perfumes = ['hawas-black', 'hawas-fire', 'asloob', 'asad-bourbon', 'khamrah', 'her-confession', 'asad-lattafa', 'yara-mujer', 'odyssey-mandarin', '9am-dive', 'hawas-atlantis'];
             const index = perfumes.indexOf(hash.replace('#', ''));
             if (index !== -1) {
                 slideActual = index;
